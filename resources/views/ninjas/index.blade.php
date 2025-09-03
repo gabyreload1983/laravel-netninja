@@ -11,12 +11,11 @@
     <h1>Ninjas</h1>
 
     <ul>
+        @foreach($ninjas as $ninja)
         <li>
-            <a href="/ninjas/{{ $ninjas[0]['id'] }}">{{ $ninjas[0]['name'] }}</a>
+            <a href="/ninjas/{{ $ninja['id'] }}">{{ $ninja['name'] }}</a>
         </li>
-        <li>
-            <a href="/ninjas/{{ $ninjas[1]['id'] }}">{{ $ninjas[1]['name'] }}</a>
-        </li>
+        @endforeach
     </ul>
 </body>
 
